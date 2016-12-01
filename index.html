@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>小小相册</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css"> -->
+    <style type="text/css">
+    #app {
+        display: block !important;
+    }
+    
+/*    .swiper-slide img {
+        width: 100%
+    }*/
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section class="bg page1">
+            <span class=''>进入相册</span>
+        </section>
+        <section class="page2">
+            <div class="gotop">↑</div>
+            <header class="g-header">
+                <!-- <span class="login">登录</span> -->
+                <span class="goback"></span>
+                <h1>小小相册</h1>
+            </header>
+            <section class="search">
+                <input type="text" placeholder="搜索你想要的图片">
+                <input type="button" value="搜一搜">
+            </section>
+            <section class='nav'>
+                <ul>
+                    <li data-type="5">明星</li>
+                    <li data-type="4">宠物</li>
+                    <li data-type="1">动漫</li>
+                    <li data-type="6">风景</li>
+                    <li data-type="2">头像</li>
+                    <li data-type="3">汽车</li>
+                </ul>
+            </section>
+            <section class='list'>
+                <section class="left">
+                </section>
+                <section class="right">
+                </section>
+            </section>
+
+        </section>
+        <section class="pic page3">       
+        </section>        
+    </div>
+
+    <!-- 模板 -->
+    <script type="text/template" id='picLayer'>
+        <header class='header'>
+            <span class="goback">&lt;</span>
+            <span class="title"><%=title%></span>
+        </header>
+        <div class="imgcontainer"  id="carousel" style="<%=style%>">
+            <ul>
+                <li><img src="<%=url%>" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+            </ul>
+        </div>
+    </script>
+    <script type="text/javascript" src='static/lib/zepto.js'></script>
+    <script type="text/javascript" src='static/lib/zepto.touch.js'></script>
+    <script type="text/javascript" src="static/lib/fx.js"></script>
+    <script type="text/javascript" src='static/lib/underscore.js'></script>
+    <script type="text/javascript" src="static/lib/backbone.js"></script>
+    <script type="text/javascript" src='static/app.js'></script>
+</body>
+
+</html>
